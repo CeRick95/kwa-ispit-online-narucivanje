@@ -1,0 +1,48 @@
+{
+  "anonymousHeader": {
+    "title": "",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "authDrop": "Web App",
+    "authSignIn": "Sign In",
+    "authSignUp": "Sign Up",
+    "languageMenu": "Language"
+  },
+  "signInPage": {
+    "formTitle": "Sign in",
+    "usernameRequired": "Email is required. Please enter your email.",
+    "passwordRequired": "Password is required. Please enter your password.",
+    "usernameLabel": "Email",
+    "passwordLabel": "Password",
+    "rememberMeLabel": "Remember me",
+    "loginButton": "Sign in",
+    "registerLink": "Sign up",
+    "forgotPasswordLink": "Forgot password?",
+    "notAMemberP": "Not a member?",
+    "usernamePlaceholder": "Please enter your email",
+    "passwordPlaceholder": "Please enter your password",
+    "emailInvFormatErr": "Bad format of email. example@example.rs|co|com|etc. Please follow the instructions.",
+    "passwordMinLentErr": "Password must be at least 6 characters. Please follow the instructions."
+  },
+  "signUpPage": {
+    "formTitle": "Sign up",
+    "firstNameLabel": "First name",
+    "firstNamePl": "Please enter your first name",
+    "firstNameReqErr": "First name is required.  Please enter your first name.",
+    "lastNameLabel": "Last name",
+    "lastNamePl": "Please enter your last name",
+    "lastNameReqErr": "Last name is required. Please enter your last name.",
+    "emailLabel": "Email",
+    "emailPl": "Please enter your email",
+    "emailReqErr": "Email is required. Please enter your email.",
+    "emailInvFormatErr": "Bad format of email. example@example.rs|co|com|etc. Please follow the instructions.",
+    "passwordLabel": "Password",
+    "passwordPl": "Please enter your password",
+    "passwordReqErr": "Password is required. Please enter your password.",
+    "passwordMinLentErr": "Password must be at least 6 characters. Please follow the instructions.",
+    "passwordHint": "",
+    "signUpButton": "Sign up",
+    "termsDescription": "By clicking\n       \"Sign up\" you agree to our",
+    "termsLink": "terms of service"
+  }
+}

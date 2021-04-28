@@ -1,0 +1,46 @@
+<div class="container text-center">
+  <br/>
+  <br/>
+  <div class="col">
+  <form class="text-center border border-light p-5" (submit)="onSubmit($event)" mdbValidate>
+    <p class="h4 mb-4">Login</p>
+
+    <!-- Email -->
+    <label for="emailId"></label><input type="email" name="email" id="emailId" (change)="onChange()" [required]="true" class="form-control mb-4" [(ngModel)]="email" placeholder="E-mail" />
+
+    <!-- Password -->
+    <label for="passwordId"></label><input type="password" name="password" id="passwordId" (change)="onChange()" class="form-control mb-4" [(ngModel)]="password" placeholder="Password" [required]="true"/>
+     <div *ngIf="show"><p class="font-weight-bold error-message-default">{{errorText}}</p></div>
+    <br/>
+      <div>
+        <!-- Forgot password -->
+        <a href="">Forgot password?</a>
+      </div>
+
+    <!-- Sign in button -->
+    <button mdbBtn gradient="peach" [rounded]="false" block="true" class="my-4" type="submit">Sign in</button>
+
+    <!-- Register -->
+    <p>Not a member?
+      <a href="">Register</a>
+    </p>
+
+    <!-- Social login -->
+    <p>Follow us on:</p>
+
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="facebook"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="instagram"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="twitter"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="github"></mdb-icon>
+    </a>
+
+  </form>
+  </div>
+</div>

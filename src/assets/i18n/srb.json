@@ -1,0 +1,48 @@
+{
+  "anonymousHeader": {
+    "title": "",
+    "aboutUs": "O nama",
+    "contactUs": "Kontaktirajte nas",
+    "authDrop": "Web aplikacija",
+    "authSignIn": "Prijavi se",
+    "authSignUp": "Registruj se",
+    "languageMenu": "Jezik"
+  },
+  "signInPage": {
+    "formTitle": "Prijavi se",
+    "usernameRequired": "Korisnicko ime(e-mail) je obavezno.",
+    "passwordRequired": "Sifra je obavezna.",
+    "usernameLabel": "Korisnicko ime(e-mail)",
+    "passwordLabel": "Sifra",
+    "rememberMeLabel": "Zapamti me?",
+    "loginButton": "Prijavi me",
+    "registerLink": "Registracija",
+    "forgotPasswordLink": "Zaboravili ste sifru?",
+    "notAMemberP": "Niste registrovan korisnik?",
+    "usernamePlaceholder": "Molimo vas unesite vase korisnicko ime(e-mail)",
+    "passwordPlaceholder": "Molimo vas unesite vasu sifru",
+    "passwordMinLentErr": "Sifra mora sadrzati minimum 6 karaktera. Molimo vas pratite instrukcije.",
+    "emailInvFormatErr": "Los format e-mail-a. Validan format example@example.rs|co|com| itd. Molimo vas pratite instrukcije."
+  },
+  "signUpPage": {
+    "formTitle": "Registruj se",
+    "firstNameLabel": "Ime",
+    "firstNamePl": "Molimo vas unesite vase ime",
+    "firstNameReqErr": "Ime je obavezno polje. Molimo vas unesite vase ime.",
+    "lastNameLabel": "Prezime",
+    "lastNamePl": "Molimo vas unesite vase prezime",
+    "lastNameReqErr": "Prezime je obavezno polje. Molimo vas unesite vase prezime.",
+    "emailLabel": "E-mail",
+    "emailPl": "Molimo vas unesite vas e-mail",
+    "emailReqErr": "E-mail polje je obavezno. Molimo vas unesite vas e-mail.",
+    "emailInvFormatErr": "Los format e-mail-a. Validan format example@example.rs|co|com|itd. Molimo vas pratite instrukcije.",
+    "passwordLabel": "Sifra",
+    "passwordPl": "Molimo vas unesite vasu sifru",
+    "passwordReqErr": "Polje sifra je obavezno. Molimo vas unesite vasu sifru",
+    "passwordMinLentErr": "Sifra mora sadrzati minimum 6 karaktera. Molimo vas pratite instrukcije.",
+    "passwordHint": "",
+    "signUpButton": "Registruj me",
+    "termsDescription": "Ako kliknete \n       \"Registruj me\" pristajete na nase",
+    "termsLink": "uslove koriscenja"
+  }
+}

@@ -1,0 +1,70 @@
+<div class="container text-center">
+  <br/>
+  <br/>
+  <div class="col">
+    <!-- Default form register -->
+    <form class="text-center border border-light p-5" (submit)="onSubmit($event)" >
+
+      <p class="h4 mb-4">Register</p>
+
+      <div class="form-row mb-4">
+        <div class="col">
+          <!-- First name -->
+          <label for="defaultRegisterFormFirstName"></label><input  type="text"
+                                                                   id="defaultRegisterFormFirstName"
+                                                                   class="form-control" placeholder="First name" (change)="onChange()"  [(ngModel)]="firstName" name="first" />
+        </div>
+        <div class="col">
+          <!-- Last name -->
+          <label for="defaultRegisterFormLastName"></label><input name="last" type="text"
+                                                                  id="defaultRegisterFormLastName" class="form-control"
+                                                                  placeholder="Last name" (change)="onChange()"  [(ngModel)]="this.lastName">
+        </div>
+      </div>
+
+      <!-- E-mail -->
+      <label for="defaultRegisterFormEmail"></label><input type="email" id="defaultRegisterFormEmail"
+                                                           class="form-control mb-4" placeholder="E-mail" name="email" (change)="onChange()"  [(ngModel)]="email">
+
+      <!-- Password -->
+      <label for="defaultRegisterFormPassword"></label><input type="password" id="defaultRegisterFormPassword"
+                                                              class="form-control" placeholder="Password"
+                                                              aria-describedby="defaultRegisterFormPasswordHelpBlock"  name="password" (change)="onChange()"  [(ngModel)]="password">
+
+      <!-- Phone number -->
+      <label for="defaultRegisterPhonePassword"></label>
+      <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number"
+             aria-describedby="defaultRegisterFormPhoneHelpBlock" (change)="onChange()" name="phone-number"  [(ngModel)]="phoneNumber">
+
+      <div *ngIf="show"><p class="error-message-default">{{errorText}}</p></div>
+      <br/>
+      <!-- Sign up button -->
+      <button mdbBtn gradient="peach" [rounded]="false" block="true" class="my-4" type="submit">Sign in</button>
+
+      <!-- Social register -->
+      <p>or sign up with:</p>
+
+      <a type="button" class="light-blue-text mx-2">
+        <mdb-icon fab icon="facebook"></mdb-icon>
+      </a>
+      <a type="button" class="light-blue-text mx-2">
+        <mdb-icon fab icon="instagram"></mdb-icon>
+      </a>
+      <a type="button" class="light-blue-text mx-2">
+        <mdb-icon fab icon="twitter"></mdb-icon>
+      </a>
+      <a type="button" class="light-blue-text mx-2">
+        <mdb-icon fab icon="github"></mdb-icon>
+      </a>
+
+      <hr>
+
+      <!-- Terms of service -->
+      <p>By clicking
+        <em>Sign up</em> you agree to our
+        <a href="" target="_blank">terms of service</a></p>
+
+    </form>
+  </div>
+</div>
+<!-- Default form register -->
