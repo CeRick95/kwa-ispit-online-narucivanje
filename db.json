@@ -26,6 +26,14 @@
       "password": "Test1234",
       "phone": "+381606566602",
       "cart": []
+    },
+    {
+      "id": 921,
+      "firstName": "Marko",
+      "lastName": "Ćetković",
+      "email": "marko.cetkovicit+11@gmail.com",
+      "password": "Test1234",
+      "phone": "+381606566602"
     }
   ],
   "products": [
