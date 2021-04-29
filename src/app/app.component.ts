@@ -1,7 +1,7 @@
-import {Component, Injector, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ComponentFactoryResolver, Injector, OnInit, ViewContainerRef} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import {CardComponent} from './components/products/card/card.component';
 import {createCustomElement} from '@angular/elements';
-import {AuthorizedLinksComponent} from './components/navbar-links/authorized-links/authorized-links.component';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +10,15 @@ import {AuthorizedLinksComponent} from './components/navbar-links/authorized-lin
 })
 export class AppComponent implements OnInit{
   title = 'ispit-online-narucivanje';
-  constructor(private  translate: TranslateService, injector: Injector) {
+  constructor(private  translate: TranslateService, private injector: Injector) {
   }
 
   ngOnInit(): void {
    this.translate.setDefaultLang('en');
+   const injector = this.injector;
+   const cardElement = createCustomElement(CardComponent, {injector});
+   customElements.define('app-card', cardElement);
   }
+
 
 }

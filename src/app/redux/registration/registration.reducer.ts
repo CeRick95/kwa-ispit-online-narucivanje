@@ -1,33 +1,24 @@
-import {AuthActionTypes} from './auth-action-types';
-
-
+import {RegistrationActionTypes} from './registration-action-types';
 
 
 const initialState: any = {};
 
-
-export const authReduces = (userState = initialState, action): any => {
+export const registrationReducer = (registrationState = initialState, action): any => {
   switch (action.type) {
-    case AuthActionTypes.ACTION_LOGIN_REQUEST:
+    case RegistrationActionTypes.ACTION_REGISTRATION_REQUEST:
       return {timestp: mTstamp()};
-    case AuthActionTypes.ACTION_LOGIN_SUCCESS:
-      console.log(action);
+    case RegistrationActionTypes.ACTION_REGISTRATION_SUCCESS:
       return  {
-                authToken: action.payload.data.accessToken,
-                tokenType: action.payload.data.tokenType,
-                tokenExp: action.payload.data.tokenExp,
-                id: action.payload.data.id,
-                cart: action.payload.data.cart,
-                timestp: mTstamp()
-              };
-    case AuthActionTypes.ACTION_LOGIN_FAIL:
+        message: 'User successfully registered with email: ',
+        timestp: mTstamp(),
+        registered: true
+      };
+    case RegistrationActionTypes.ACTION_REGISTRATION_FAIL:
       return {
         error: action.payload.error
       };
-    case AuthActionTypes.ACTION_LOGOUT:
-     return {};
     default:
-      return userState;
+      return registrationState;
   }
 };
 

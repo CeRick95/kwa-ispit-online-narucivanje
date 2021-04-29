@@ -1,0 +1,24 @@
+
+<mdb-card>
+  <!--Card image-->
+
+  <img src="{{img}}"  style="max-height: 422px" alt="Card image cap">
+
+  <!--Card content-->
+  <mdb-card-body>
+
+    <!--Title-->
+    <mdb-card-title>
+      <h4>{{title}}</h4>
+    </mdb-card-title>
+
+    <!--Text-->
+    <mdb-card-text> {{description}}
+    </mdb-card-text>
+    <br/>
+    <mdb-card-text class="font-weight-bold font-italic"> Price: {{price}} RSD
+    </mdb-card-text>
+    <input #productID type="hidden" value="{{productId}}">
+    <button type="button" (click)="onClick($event)" mdbBtn gradient="peach" mdbWavesEffect>Add to Cart</button>
+  </mdb-card-body>
+</mdb-card>

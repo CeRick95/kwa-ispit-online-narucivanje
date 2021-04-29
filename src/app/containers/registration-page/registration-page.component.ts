@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-registration-page',
@@ -13,7 +14,7 @@ export class RegistrationPageComponent implements OnInit {
   password: string;
   errorText: string;
   show: boolean;
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
     this.firstName = '';
@@ -38,21 +39,38 @@ export class RegistrationPageComponent implements OnInit {
     this.show = false;
   }
 
-  onSubmit(event: Event): void{
+  async onSubmit(event: Event): Promise<void> {
     console.log('Email: ' + this.email + 'Password: ' + this.password);
-    if (this.email === '' || this.password === '' || this.firstName === '' || this.lastName === '' || this.phoneNumber === ''){
+    if (this.email === '' || this.password === '' || this.firstName === '' || this.lastName === '' || this.phoneNumber === '') {
       this.errorText = 'All fields are required.';
       this.show = true;
       return;
-    }else if (!this.validateEmail(this.email)){
+    } else if (!this.validateEmail(this.email)) {
       this.errorText = 'Please input valid email format';
       this.show = true;
       return;
-    }else if (!this.validatePhoneNumber(this.phoneNumber)){
+    } else if (!this.validatePhoneNumber(this.phoneNumber)) {
       this.errorText = 'Please input valid phone number format';
       this.show = true;
       return;
     }
+    const exist: boolean = await this.authService.existsByEmail(this.email).then(value => {
+      return value;
+    });
+    if (exist) {
+      this.errorText = 'Email already exist in database. Email: ' + this.email;
+      this.show = true;
+      return;
+    }
+    const validJson = {
+      id: Math.abs(Math.round(Math.random() * 1000)),
+      firstName: this.firstName,
+      lastName: this.lastName,
+      email: this.email,
+      password: this.password,
+      phone: this.phoneNumber
+    };
+    this.authService.registration(validJson);
     event.preventDefault();
   }
 }

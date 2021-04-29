@@ -11,6 +11,7 @@ export class AnonymousLinksComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

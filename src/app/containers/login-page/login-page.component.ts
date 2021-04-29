@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-login-page',
@@ -11,7 +12,7 @@ export class LoginPageComponent implements OnInit {
   errorText: string;
   show: boolean;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
     this.email = '';
@@ -30,7 +31,6 @@ export class LoginPageComponent implements OnInit {
   }
 
   onSubmit(event: Event): void{
-    console.log('Email: ' + this.email + 'Password: ' + this.password);
     if (this.email === '' || this.password === ''){
       this.errorText = 'All fields are required';
       this.show = true;
@@ -40,6 +40,7 @@ export class LoginPageComponent implements OnInit {
       this.show = true;
       return;
     }
+    this.authService.login(this.email, this.password);
     event.preventDefault();
   }
 

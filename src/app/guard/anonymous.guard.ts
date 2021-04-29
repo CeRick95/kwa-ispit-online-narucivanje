@@ -9,8 +9,8 @@ export class AnonymousGuard implements CanActivate {
   constructor(public router: Router) {}
 
   canActivate(): boolean {
-    if (localStorage.getItem('token')){
-      this.router.navigate(['angular-helper']).then();
+    if (localStorage.getItem('authToken')){
+      this.router.navigateByUrl('/dashboard', {skipLocationChange: false}).then();
       return false;
     }
     return true;

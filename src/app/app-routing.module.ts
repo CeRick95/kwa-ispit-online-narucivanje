@@ -7,13 +7,15 @@ import {AuthGuard} from './guard/auth-guard';
 import {LoginPageComponent} from './containers/login-page/login-page.component';
 import {RegistrationPageComponent} from './containers/registration-page/registration-page.component';
 import {DashboardPageComponent} from './containers/private/dashboard-page/dashboard-page.component';
+import {CartPageComponent} from './containers/private/cart-page/cart-page.component';
 
 const routes: Routes = [
   { path: '' ,   component: HomePageComponent, canActivate: [AnonymousGuard]},
   { path: 'angular-helper' ,   component: AngularHelperPageComponent, canActivate: [AnonymousGuard]},
   { path: 'login', component: LoginPageComponent, canActivate: [AnonymousGuard]},
   { path: 'register', component: RegistrationPageComponent, canActivate: [AnonymousGuard]},
-  { path: 'dashboard', component: DashboardPageComponent, canActivate: [AnonymousGuard]}
+  { path: 'dashboard', component: DashboardPageComponent, canActivate: [AuthGuard]},
+  { path: 'cart', component: CartPageComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

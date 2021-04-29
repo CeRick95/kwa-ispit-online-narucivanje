@@ -2,13 +2,22 @@
   <!-- Links -->
   <ul class="navbar-nav mr-auto" *ngIf="show">
     <li class="nav-item active">
-      <a class="nav-link waves-light" mdbWavesEffect>Dashboard<span class="sr-only">(current)</span></a>
+      <a class="nav-link waves-light" [routerLink]="'dashboard'" mdbWavesEffect>Dashboard<span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
       <a class="nav-link waves-light" mdbWavesEffect>Profile</a>
     </li>
     <li class="nav-item">
       <a class="nav-link waves-light" mdbWavesEffect>Cart</a>
+    </li>
+    <li class="nav-item">
+      <p class="nav-link waves-light" (click)="logout()" mdbWavesEffect>Logout</p>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="'cart'" class="nav-link navbar-link-2 waves-effect">
+        <span class="badge badge-pill red">{{sizeOfCart}}</span>
+        <i class="fas fa-shopping-cart pl-0"></i>
+      </a>
     </li>
   </ul>
   <!-- Links -->
