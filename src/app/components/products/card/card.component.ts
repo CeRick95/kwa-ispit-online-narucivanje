@@ -7,7 +7,7 @@ import {CartService} from '../../../services/cart.service';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @ViewChild('productID') productID: ElementRef<HTMLDivElement>;
+  @ViewChild('productID') productID: ElementRef<HTMLInputElement>;
   @Input() img: string;
   @Input() title: string;
   @Input() description: string;
